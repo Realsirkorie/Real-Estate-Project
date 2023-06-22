@@ -23,7 +23,7 @@ class Listing(models.Model):
     bedrooms = models.IntegerField()
     bathrooms = models.DecimalField(max_digits=2, decimal_places=1)
     sale_type = models.CharField(max_length=10, choices=SaleType.choices, default=SaleType.FOR_SALE)
-    home_type = models.CharField(max_length=10, choices=SaleType.choices, default=HomeType.HOUSE)
+    home_type = models.CharField(max_length=10, choices=HomeType.choices, default=HomeType.HOUSE)
     main_photo = models.ImageField(upload_to='listings/')
     photo_1 = models.ImageField(upload_to='listings/')
     photo_2 = models.ImageField(upload_to='listings/')
